@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComConecta", "ComConecta\ComConecta.vbproj", "{4CA6CFAB-4990-4063-A43D-2D9F41158F05}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComTipos", "ComTipos\ComTipos.vbproj", "{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComMetodos", "ComMetodos\ComMetodos.vbproj", "{C3F5D089-4A8F-4545-959C-EBF24F2CC701}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComIdentidades", "ComIdentidades\ComIdentidades.vbproj", "{809E0654-5D58-40EE-A103-6E96A09CF11D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ComControladora", "ComControladora\ComControladora.vbproj", "{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Groupon", "Groupon\Groupon\Groupon\Groupon.vbproj", "{1B318E12-F574-4A22-823C-B6DEF0A250D4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Groupon.Web", "Groupon\Groupon\Groupon.Web\Groupon.Web.vbproj", "{8A3CBD80-7599-4539-ADC7-132BFE5D9E74}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ServicioGroupon", "Groupon\Groupon\ServicioGroupon\ServicioGroupon.vbproj", "{4841A756-CDC0-49C0-A460-E81FD2D5640D}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CA6CFAB-4990-4063-A43D-2D9F41158F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA6CFAB-4990-4063-A43D-2D9F41158F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA6CFAB-4990-4063-A43D-2D9F41158F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA6CFAB-4990-4063-A43D-2D9F41158F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F5D089-4A8F-4545-959C-EBF24F2CC701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F5D089-4A8F-4545-959C-EBF24F2CC701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F5D089-4A8F-4545-959C-EBF24F2CC701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F5D089-4A8F-4545-959C-EBF24F2CC701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809E0654-5D58-40EE-A103-6E96A09CF11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809E0654-5D58-40EE-A103-6E96A09CF11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809E0654-5D58-40EE-A103-6E96A09CF11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809E0654-5D58-40EE-A103-6E96A09CF11D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B318E12-F574-4A22-823C-B6DEF0A250D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B318E12-F574-4A22-823C-B6DEF0A250D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B318E12-F574-4A22-823C-B6DEF0A250D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B318E12-F574-4A22-823C-B6DEF0A250D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3CBD80-7599-4539-ADC7-132BFE5D9E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3CBD80-7599-4539-ADC7-132BFE5D9E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3CBD80-7599-4539-ADC7-132BFE5D9E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3CBD80-7599-4539-ADC7-132BFE5D9E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4841A756-CDC0-49C0-A460-E81FD2D5640D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4841A756-CDC0-49C0-A460-E81FD2D5640D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4841A756-CDC0-49C0-A460-E81FD2D5640D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4841A756-CDC0-49C0-A460-E81FD2D5640D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
