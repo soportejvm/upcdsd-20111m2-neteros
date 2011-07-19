@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IServiceGroupon" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1268/ServiceGroupon.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IServiceGroupon"
+                contract="ServiceReference1.IServiceGroupon" name="BasicHttpBinding_IServiceGroupon" />
+        </client>
+    </system.serviceModel>
+</configuration>
