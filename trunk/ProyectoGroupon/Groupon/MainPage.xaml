@@ -4,15 +4,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    d:DesignHeight="532" d:DesignWidth="1140" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" BorderBrush="YellowGreen">
 
-    <Grid x:Name="LayoutRoot" Background="White" Height="350" Width="1072">
-        <sdk:TreeView Height="279" HorizontalAlignment="Left" Margin="-62,38,0,0" Name="TreeView1" VerticalAlignment="Top" Width="264">
-            <sdk:TreeViewItem Header="Clientes">
-                <sdk:TreeViewItem Header="Registrar Cliente" Name="TreeViewItem1" />
-            </sdk:TreeViewItem>
-            <sdk:TreeViewItem Header="Ofertas" />
-            <sdk:TreeViewItem Header="Comprar Oferta" />
-        </sdk:TreeView>
+    <Grid x:Name="LayoutRoot" Background="YellowGreen" Height="679" Width="1418">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="191*" />
+            <RowDefinition Height="110" />
+            <RowDefinition Height="140" />
+            <RowDefinition Height="238*" />
+        </Grid.RowDefinitions>
+        <TextBox Height="48" HorizontalAlignment="Left" Margin="-4,117,0,0" Name="TextBox1" VerticalAlignment="Top" Width="1180" Background="#FF5EC5D8" />
+        <TextBox Background="#D1070505" Height="117" HorizontalAlignment="Left" Name="TextBox2" VerticalAlignment="Top" Width="1180" />
+        <Image Height="128" HorizontalAlignment="Left" Margin="14,5,0,0" Name="Image1" Stretch="Fill" VerticalAlignment="Top" Width="311" Source="/Groupon;component/Images/groupon.png" />
+        <HyperlinkButton Content="Registráte" Height="23" HorizontalAlignment="Left" Margin="839,132,0,0" Name="HyperlinkButton1" VerticalAlignment="Top" Width="100" Foreground="Black" FontSize="13" />
+        <HyperlinkButton Content="Login" FontSize="13" Foreground="Black" Height="23" HorizontalAlignment="Left" Margin="959,132,0,0" Name="HyperlinkButton2" VerticalAlignment="Top" Width="100" />
     </Grid>
 </UserControl>

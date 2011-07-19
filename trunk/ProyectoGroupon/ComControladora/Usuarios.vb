@@ -6,4 +6,11 @@
         RegistrarUsuario = D.RegistrarUsuario(oUsuario)
         D = Nothing
     End Function
+
+    Public Function ValidarUsuario(ByVal pcEmail As String) As ComTipos.clsDataSet
+        Dim D As ComMetodos.UsuarioImpl
+        D = New ComMetodos.UsuarioImpl
+        ValidarUsuario = D.ValidarUsuario(pcEmail)
+        D = Nothing
+    End Function
 End Class

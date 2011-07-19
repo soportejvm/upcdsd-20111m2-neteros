@@ -379,23 +379,23 @@ Module ModControles
         Return sTemp
     End Function
 
-    Public Sub LLenaTreeView(ByVal indicePadre As Integer, ByVal nodePadre As TreeViewItem, ByVal D As List(Of ClsTreeView), ByRef TreeView1 As TreeView)
+    'Public Sub LLenaTreeView(ByVal indicePadre As Integer, ByVal nodePadre As TreeViewItem, ByVal D As List(Of ClsTreeView), ByRef TreeView1 As TreeView)
 
-        Dim var = From p In D
-                 Where p.nNivel Like indicePadre.ToString
-                 Select p
+    '    Dim var = From p In D
+    '             Where p.nNivel Like indicePadre.ToString
+    '             Select p
 
-        For Each item In var
-            Dim nuevoNodo As New TreeViewItem
-            nuevoNodo.Header = UCase(item.cDescrip)
-            nuevoNodo.Tag = item.nCodOpe
+    '    For Each item In var
+    '        Dim nuevoNodo As New TreeViewItem
+    '        nuevoNodo.Header = UCase(item.cDescrip)
+    '        nuevoNodo.Tag = item.nCodOpe
 
-            If nodePadre Is Nothing Then
-                TreeView1.Items.Add(nuevoNodo)
-            Else
-                nodePadre.Items.Add(nuevoNodo)
-            End If
-            LLenaTreeView(Int32.Parse(item.nCodOpe), nuevoNodo, D, TreeView1)
-        Next
-    End Sub
+    '        If nodePadre Is Nothing Then
+    '            TreeView1.Items.Add(nuevoNodo)
+    '        Else
+    '            nodePadre.Items.Add(nuevoNodo)
+    '        End If
+    '        LLenaTreeView(Int32.Parse(item.nCodOpe), nuevoNodo, D, TreeView1)
+    '    Next
+    'End Sub
 End Module

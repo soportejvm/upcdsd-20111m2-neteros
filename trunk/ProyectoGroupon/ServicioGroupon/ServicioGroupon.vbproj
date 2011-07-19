@@ -155,6 +155,10 @@
       <Project>{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}</Project>
       <Name>ComControladora</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ComTipos\ComTipos.vbproj">
+      <Project>{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}</Project>
+      <Name>ComTipos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

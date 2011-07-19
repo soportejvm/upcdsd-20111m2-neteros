@@ -439,37 +439,5 @@ Module ModValidaciones
         otros(15) = "quince"
     End Sub
 
-    Public Function DevuelveValorITF(ByVal pnMonto As Double) As Double
-        Dim nResultado As Double = 0
-        Dim nEntero As Integer = 0
-        Dim sCadena As String = ""
-        Dim sDigito2 As String
-
-        nResultado = CDbl(pnMonto * oLogin.nValorITF * 100)
-
-        If InStr(CStr(nResultado), ".") = 0 Then
-            sCadena = CStr(nResultado) & ".00"
-        Else
-            sCadena = CStr(nResultado)
-        End If
-
-        nResultado = CDbl(Mid(sCadena, 1, InStr(sCadena, ".") - 1))
-
-        nEntero = CInt(nResultado)
-        sCadena = CStr(nEntero)
-        sDigito2 = Right(sCadena, 1)
-
-        If CInt(sDigito2) < 5 Then
-            sDigito2 = "0"
-        Else
-            sDigito2 = "5"
-        End If
-
-        sCadena = Mid(sCadena, 1, Len(sCadena) - 1) & sDigito2
-
-        nResultado = CDbl(sCadena) / 100
-
-        Return nResultado
-    End Function
 
 End Module
