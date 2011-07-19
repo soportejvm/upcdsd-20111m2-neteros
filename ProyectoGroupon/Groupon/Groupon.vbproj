@@ -84,8 +84,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -107,9 +111,13 @@
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Cliente.vb" />
     <Compile Include="MainPage.xaml.vb">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModConfig.vb" />
+    <Compile Include="ModControles.vb" />
+    <Compile Include="ModValidaciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="Service References\ServiceReference1\Reference.vb">
       <AutoGen>True</AutoGen>
@@ -136,6 +144,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\AppManifest.xml" />
+    <None Include="Service References\ServiceReference1\ServiceGroupon.wsdl" />
+    <None Include="Service References\ServiceReference1\ServiceGroupon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\ServiceGroupon1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Images\groupon.png" />
     <None Include="Service References\ServiceReference1\ServiceGroupon.disco" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />
@@ -144,13 +160,6 @@
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
     <Content Include="ServiceReferences.ClientConfig" />
-    <None Include="Service References\ServiceReference1\ServiceGroupon.wsdl" />
-    <None Include="Service References\ServiceReference1\ServiceGroupon.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\ServiceGroupon1.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

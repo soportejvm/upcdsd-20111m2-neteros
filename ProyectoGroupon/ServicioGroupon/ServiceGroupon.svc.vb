@@ -7,12 +7,6 @@ Imports System.Xml
 Public Class ServiceGroupon
     Implements IServiceGroupon
     Private Function DevuelveXDocument(ByVal sDatos As String) As XDocument
-        'Dim S As Stream = New MemoryStream(Len(sDatos))
-        'S.Write(System.Text.Encoding.UTF8.GetBytes(sDatos), 0, Len(sDatos))
-        'S.Flush()
-        'S.Position = 0
-        'sDatos = "<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes"" ?>" & sDatos
-        'XDocument.Parse(sDatos)
         Dim S As TextReader = New StringReader(sDatos)
         Dim doc As XDocument = XDocument.Load(S)
         Return doc
@@ -38,6 +32,19 @@ Public Class ServiceGroupon
         RegistraCliente = C.RegistrarUsuario(oUsuario)
 
         Return RegistraCliente
+    End Function
+
+    Public Function ValidarUsuario(ByVal pcMail As String) As String Implements IServiceGroupon.ValidarUsuario
+        Dim C As ComControladora.Usuarios
+        Dim D As New ComTipos.clsDataset
+
+        C = New ComControladora.Usuarios
+
+        D = New ComTipos.clsDataSet
+        D = C.ValidarUsuario(pcMail)
+
+
+        Return D.DevuelveXMLLinQ
     End Function
 
 End Class

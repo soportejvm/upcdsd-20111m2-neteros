@@ -8,6 +8,9 @@ Public Interface IServiceGroupon
     <OperationContract()>
     Function RegistraCliente(ByVal oCliente As String) As Integer
 
+    <OperationContract()>
+    Function ValidarUsuario(ByVal pcMail As String) As String
+
 End Interface
 
 ' Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
