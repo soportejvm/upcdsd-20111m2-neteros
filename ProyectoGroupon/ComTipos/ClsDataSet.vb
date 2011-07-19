@@ -564,7 +564,7 @@ Imports System.Data.SqlClient
 
     Public Function DevuelveIndiceColumna(ByVal sNomColumna As String) As Integer
 
-        Dim i As Integer, j As Integer
+        Dim i As Integer
         Dim nTemp As Integer = 0
 
         For i = 1 To nNumColumn
