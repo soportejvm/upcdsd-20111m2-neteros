@@ -21,4 +21,13 @@
             Return
         End Set
     End Property
+
+    Public Property Dias As Integer
+        Get
+            Dias = nDias
+        End Get
+        Set(ByVal value As Integer)
+            Return
+        End Set
+    End Property
 End Class
