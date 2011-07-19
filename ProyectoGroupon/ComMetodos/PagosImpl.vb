@@ -1,4 +1,4 @@
-﻿Public Class NombrePagosImpl
+﻿Public Class PagosImpl
 
     Public Function RegistrarPagoCupon(ByVal oPagos As ComIdentidades.Pagos) As Integer
         Dim objCon As ComConecta.clsConecta
@@ -21,6 +21,5 @@
         oComm = Nothing
         objCon = Nothing
     End Function
-
 
 End Class
