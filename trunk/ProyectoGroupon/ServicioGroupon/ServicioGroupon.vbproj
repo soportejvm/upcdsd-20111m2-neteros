@@ -45,11 +45,11 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComControladora">
-      <HintPath>..\..\..\ComConecta\ComControladora\obj\Release\ComControladora.dll</HintPath>
+    <Reference Include="ComConecta">
+      <HintPath>..\ComConecta\obj\Release\ComConecta.dll</HintPath>
     </Reference>
     <Reference Include="ComIdentidades">
-      <HintPath>..\..\..\ComConecta\ComIdentidades\obj\Release\ComIdentidades.dll</HintPath>
+      <HintPath>..\ComIdentidades\bin\Release\ComIdentidades.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -149,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComControladora\ComControladora.vbproj">
+      <Project>{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}</Project>
+      <Name>ComControladora</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
