@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow x:Class="Groupon.RegistroCupon"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="739" Height="625"
+           Title="Registro de Cupón" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="Cancelar" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Aceptar" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,12,79,0" Grid.Row="1" />
+        <sdk:Label Content="Titulo de la Oferta :" Height="28" HorizontalAlignment="Right" Margin="0,10,586,0" Name="Label1" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Descripcion :" Height="28" HorizontalAlignment="Right" Margin="0,38,586,0" Name="Label2" VerticalAlignment="Top" Width="120" />
+        <sdk:Label Content="Precio :" Height="28" HorizontalAlignment="Right" Margin="0,112,445,0" Name="Label3" VerticalAlignment="Top" Width="50" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,6,12,0" Name="txtTitulo" VerticalAlignment="Top" Width="568" />
+        <TextBox Height="68" HorizontalAlignment="Right" Margin="0,34,12,0" Name="txtDescripcion" VerticalAlignment="Top" Width="568" TextWrapping="Wrap" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,108,360,0" Name="txtPrecio" VerticalAlignment="Top" Width="79" Text="0.00" TextAlignment="Right" />
+        <sdk:Label Content="Descuento :" Height="28" HorizontalAlignment="Right" Margin="0,112,279,0" Name="Label4" VerticalAlignment="Top" Width="75" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="444,108,0,0" Name="txtDscto" VerticalAlignment="Top" Width="79" Text="0.00" TextAlignment="Right" />
+        <Image Margin="12,158,12,31" Name="imgOferta" Stretch="Fill" />
+        <Button Content="..." Height="24" Margin="0,527,12,0" Name="cmdCargaD" Width="32" HorizontalAlignment="Right" />
+        <sdk:Label Background="White" BorderBrush="Black" BorderThickness="1" Content="." FontSize="9" Height="24" Margin="60,527,50,0" Name="txtRutaD" />
+        <sdk:Label Content="Ruta :" Height="28" Margin="19,525,0,33" Name="Label5" HorizontalAlignment="Left" Width="35" Grid.RowSpan="2" />
+        <sdk:Label Content="Imagen de la Oferta" FontWeight="Bold" Height="28" Margin="12,134,231,389" Name="Label6" Foreground="Blue" />
+        <sdk:Label Content="%" Height="28" HorizontalAlignment="Right" Margin="0,112,177,0" Name="txtDesc" VerticalAlignment="Top" Width="31" />
+        <sdk:Label Content="Dias" Height="28" HorizontalAlignment="Right" Margin="0,112,586,0" Name="Label7" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,108,501,0" Name="txtDias" VerticalAlignment="Top" Width="79" Text="0" TextAlignment="Right" />
+    </Grid>
+</controls:ChildWindow>
