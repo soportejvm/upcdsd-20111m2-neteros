@@ -69,16 +69,6 @@ Public Class ServiceGroupon
         Dim Cupones = From element In DevuelveXDocument(oCupon).Descendants("DATA") Select pcTitulo = element.Descendants("pcTitulo").Value, pcDescripcion = element.Descendants("pcDescripcion").Value, _
         nCosto = element.Descendants("nCosto").Value, nDias = element.Descendants("nDias").Value, nDesc = element.Descendants("nDesc").Value
 
-        '        - <GENESYS>
-        '- <DATA>
-        '  <pcTitulo>asdasdas</pcTitulo> 
-        '  <pcDescripcion>asdasd</pcDescripcion> 
-        'pcDescripcion
-        '  <nCosto>567</nCosto> 
-        '  <nDias>4</nDias> 
-        '  <nDesc>12</nDesc> 
-        '  </DATA>
-        '  </GENESYS>
 
         For Each item In Cupones
             objCupon = New ComIdentidades.Cupon
@@ -113,7 +103,7 @@ Public Class ServiceGroupon
         D = Nothing
     End Function
 
-    Public Function RegistrarPagoCupon(ByVal oPagos As String) As Integer Implements IServiceGroupon.RegistrarPagoCupon
+    Public Function RegistrarPagoCupon(ByVal oPagos As String, ByVal pcMail As String) As Integer Implements IServiceGroupon.RegistrarPagoCupon
         Dim C As ComControladora.Pagos
         Dim D As ComIdentidades.Pagos
 
@@ -132,6 +122,8 @@ Public Class ServiceGroupon
 
         C = New ComControladora.Pagos
         C.RegistrarPagoCupon(D)
+
+        Call EnviaCorreo(pcMail, "Compra en Groupon", "Gracias por comprar nuestras ofertas")
 
         C = Nothing
         D = Nothing
