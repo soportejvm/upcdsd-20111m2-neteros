@@ -19,6 +19,9 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Groupon.Web", "Groupon.Web\Groupon.Web.vbproj", "{8A3CBD80-7599-4539-ADC7-132BFE5D9E74}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ServicioGroupon", "ServicioGroupon\ServicioGroupon.vbproj", "{4841A756-CDC0-49C0-A460-E81FD2D5640D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C3F5D089-4A8F-4545-959C-EBF24F2CC701} = {C3F5D089-4A8F-4545-959C-EBF24F2CC701}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
