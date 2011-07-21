@@ -46,12 +46,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComIdentidades">
-      <HintPath>..\ComIdentidades\obj\Release\ComIdentidades.dll</HintPath>
-    </Reference>
-    <Reference Include="ComMetodos">
-      <HintPath>..\ComMetodos\obj\Release\ComMetodos.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -70,6 +64,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cupon.vb" />
     <Compile Include="Pagos.vb" />
     <Compile Include="Usuarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -108,6 +103,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ComIdentidades\ComIdentidades.vbproj">
+      <Project>{809E0654-5D58-40EE-A103-6E96A09CF11D}</Project>
+      <Name>ComIdentidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComMetodos\ComMetodos.vbproj">
+      <Project>{C3F5D089-4A8F-4545-959C-EBF24F2CC701}</Project>
+      <Name>ComMetodos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComTipos\ComTipos.vbproj">
       <Project>{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}</Project>
       <Name>ComTipos</Name>
