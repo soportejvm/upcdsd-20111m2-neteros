@@ -11,17 +11,25 @@ Public Interface IServiceGroupon
     <OperationContract()>
     Function ValidarUsuario(ByVal pcMail As String) As String
 
+    <OperationContract()>
+    Function RegistrarCupon(ByVal oCupon As String, ByVal oFoto() As Byte) As Integer
+
+    <OperationContract()>
+    Function DevuelveOfertas() As String
+
+    <OperationContract()>
+    Function RegistrarPagoCupon(ByVal oPagos As String) As Integer
+
+
+
+    ' Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
+    <DataContract()>
+    Class ClsCupon
+        <DataMember()> Public cTitulo As String
+        <DataMember()> Public cDescripcion As String
+        <DataMember()> Public nCosto As Double
+        <DataMember()> Public nDesc As Double
+        <DataMember()> Public oFotoOferta() As Byte
+    End Class
 End Interface
 
-' Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
-
-<DataContract()>
-Public Class CompositeType
-
-    <DataMember()>
-    Public Property BoolValue() As Boolean
-
-    <DataMember()>
-    Public Property StringValue() As String
-
-End Class
