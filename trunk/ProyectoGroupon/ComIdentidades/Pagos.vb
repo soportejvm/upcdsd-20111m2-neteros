@@ -3,37 +3,57 @@
     Private dFecPago As Date
     Private nMonto As Double
     Private nMedioPago As Integer
+    Private nNrotarjeta As String
+    Private cCCV As String
 
     Public Property Cupon As Integer
         Get
-            Cupon = nIdCupon
+            Return nIdCupon
         End Get
         Set(ByVal value As Integer)
-            Return
+            nIdCupon = value
         End Set
     End Property
     Public Property FechaPago As Date
         Get
-            FechaPago = dFecPago
+            Return dFecPago
         End Get
         Set(ByVal value As Date)
-            Return
+            dFecPago = value
         End Set
     End Property
     Public Property Monto As Double
         Get
-            Monto = nMonto
+            Return nMonto
         End Get
         Set(ByVal value As Double)
-            Return
+            nMonto = value
         End Set
     End Property
     Public Property MedioPago As Integer
         Get
-            MedioPago = nMedioPago
+            Return nMedioPago
         End Get
         Set(ByVal value As Integer)
-            Return
+            nMedioPago = value
+        End Set
+    End Property
+
+    Public Property NroTarjeta As String
+        Get
+            Return nNrotarjeta
+        End Get
+        Set(ByVal value As String)
+            nNrotarjeta = value
+        End Set
+    End Property
+
+    Public Property CCV As String
+        Get
+            Return cCCV
+        End Get
+        Set(ByVal value As String)
+            cCCV = value
         End Set
     End Property
 End Class
