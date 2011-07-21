@@ -7,46 +7,46 @@
 
     Public Property Email As String
         Get
-            Email = pcEmail
+            Return pcEmail
         End Get
         Set(ByVal value As String)
-            Return
+            pcEmail = value
         End Set
     End Property
 
     Public Property Nombres As String
         Get
-            Nombres = pcNombres
+            Return pcNombres
         End Get
         Set(ByVal value As String)
-            Return
+            pcNombres = value
         End Set
     End Property
 
     Public Property Apellidos As String
         Get
-            Apellidos = pcApellidos
+            Return pcApellidos
         End Get
         Set(ByVal value As String)
-            Return
+            pcApellidos = value
         End Set
     End Property
 
-    Public Property Usuario As Integer
+    Public Property Usuario As String
         Get
-            Usuario = pcCodUsu
+            Return pcCodUsu
         End Get
-        Set(ByVal value As Integer)
-            Return
+        Set(ByVal value As String)
+            pcCodUsu = value
         End Set
     End Property
 
     Public Property Password As String
         Get
-            Password = pcPass
+            Return pcPass
         End Get
         Set(ByVal value As String)
-            Return
+            pcPass = value
         End Set
     End Property
 End Class
