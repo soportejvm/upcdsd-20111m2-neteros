@@ -1,4 +1,4 @@
-﻿Public Class Pagos
+﻿Public Class Pagos : Inherits MarshalByRefObject
 
     Public Function RegistrarPagoCupon(ByVal oPago As ComIdentidades.Pagos) As Integer
         Dim D As ComMetodos.PagosImpl
