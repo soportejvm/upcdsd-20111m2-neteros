@@ -17,8 +17,8 @@
 
     Sub DevuelveOfertas(ByVal sender As Object, ByVal e As ServiceReference1.DevuelveOfertasCompletedEventArgs)
 
-        DGOfertas.ItemsSource = (From element In DevuelveXDocument(e.Result).Descendants("DATA") Select New Cupon With {.Codigo = element.Descendants("id").Value, .Titulo = element.Descendants("cTitulo").Value, .Descripcion = element.Descendants("cDescripcion").Value, _
-                                                                                            .Costo = element.Descendants("nCosto").Value, .Descuento = element.Descendants("nDesc").Value})
+        DGOfertas.ItemsSource = (From element In DevuelveXDocument(e.Result).Descendants("DATA") Select New Cupon With {.Codigo = IIf(element.Descendants("id").Value = "", "0", element.Descendants("id").Value), .Titulo = element.Descendants("cTitulo").Value, .Descripcion = element.Descendants("cDescripcion").Value, _
+                                                                                            .Costo = IIf(element.Descendants("nCosto").Value = "", "0.00", element.Descendants("nCosto").Value), .Descuento = IIf(element.Descendants("nDesc").Value = "", "0.00", element.Descendants("nDesc").Value)})
         '.Foto = Bytes2Image(element.Descendants("oFotoOferta").Value)})
 
 
@@ -68,8 +68,10 @@
                 End If
                 i = i + 1
             Next
-            'Else
-            '    MessageBox.Show("Debe seleccionar un elemento de la lista", "Mensaje", MessageBoxButton.OK)
+            Dim webService As ServiceReference1.ServiceGrouponClient = New ServiceReference1.ServiceGrouponClient
+            AddHandler webService.DevuelveOfertasCompleted, AddressOf DevuelveOfertas
+            webService.DevuelveOfertasAsync()
+            webService = Nothing
         End If
     End Sub
 
