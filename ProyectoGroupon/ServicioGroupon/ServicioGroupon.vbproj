@@ -45,18 +45,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ComConecta">
-      <HintPath>..\ComConecta\obj\Release\ComConecta.dll</HintPath>
-    </Reference>
-    <Reference Include="ComIdentidades">
-      <HintPath>..\ComIdentidades\bin\Release\ComIdentidades.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
@@ -151,9 +146,21 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ComConecta\ComConecta.vbproj">
+      <Project>{4CA6CFAB-4990-4063-A43D-2D9F41158F05}</Project>
+      <Name>ComConecta</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ComControladora\ComControladora.vbproj">
       <Project>{C498CE29-6ED7-4A3C-8D89-70DC1D9BF1DB}</Project>
       <Name>ComControladora</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComIdentidades\ComIdentidades.vbproj">
+      <Project>{809E0654-5D58-40EE-A103-6E96A09CF11D}</Project>
+      <Name>ComIdentidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComMetodos\ComMetodos.vbproj">
+      <Project>{C3F5D089-4A8F-4545-959C-EBF24F2CC701}</Project>
+      <Name>ComMetodos</Name>
     </ProjectReference>
     <ProjectReference Include="..\ComTipos\ComTipos.vbproj">
       <Project>{9E7DE315-C1E8-49AE-BF65-42DE20B28D45}</Project>
