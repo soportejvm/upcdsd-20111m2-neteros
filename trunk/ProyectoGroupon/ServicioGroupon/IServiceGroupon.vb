@@ -18,7 +18,7 @@ Public Interface IServiceGroupon
     Function DevuelveOfertas() As String
 
     <OperationContract()>
-    Function RegistrarPagoCupon(ByVal oPagos As String) As Integer
+    Function RegistrarPagoCupon(ByVal oPagos As String, ByVal pcMail As String) As Integer
 
 
 
