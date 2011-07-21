@@ -1,4 +1,5 @@
-﻿Partial Public Class RegistroCliente
+﻿
+Partial Public Class RegistroCliente
     Inherits ChildWindow
     Dim oClientes As List(Of Cliente)
     Public Sub New()
@@ -7,6 +8,41 @@
 
     Private Sub OKButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) Handles OKButton.Click
         Dim sCadenaClientes As String = ""
+
+        If Trim(Me.txtNombres.Text) = "" Then
+            txtMensaje.Text = "Ingrese Nombres"
+            txtNombres.Focus()
+            Exit Sub
+        End If
+
+        If Trim(Me.txtApellidos.Text) = "" Then
+            txtMensaje.Text = "Ingrese Apellidos"
+            txtApellidos.Focus()
+            Exit Sub
+        End If
+
+
+        If Trim(Me.txtMail.Text) = "" Then
+            txtMensaje.Text = "Ingrese E-Mail"
+            txtMail.Focus()
+            Exit Sub
+        End If
+
+
+        If Trim(Me.txtContraseña.Password) = "" Then
+            txtMensaje.Text = "Ingrese Contraseña"
+            txtContraseña.Focus()
+            Exit Sub
+        End If
+
+        If Trim(Me.txtRepContraseña.Password) = "" Then
+            txtMensaje.Text = "Repita la Contraseña"
+            txtRepContraseña.Focus()
+            Exit Sub
+        End If
+
+        txtMensaje.Text = ""
+
 
         Call LlenaDatosCliente()
 
@@ -39,8 +75,8 @@
             .pcEmail = Trim(Me.txtMail.Text)
             .pcNombres = Trim(Me.txtNombres.Text)
             .pcApellidos = Trim(Me.txtApellidos.Text)
-            .pcCodUsu = Trim(Mid(Me.txtNombres.Text, 1, 1)) & Trim(Me.txtApellidos.Text)
-            .pcPass = Trim(Me.txtContraseña.PasswordChar)
+            .pcCodUsu = Trim(Me.txtMail.Text)
+            .pcPass = Trim(Me.txtContraseña.Password)
         End With
 
         oClientes.Add(Clientes)
