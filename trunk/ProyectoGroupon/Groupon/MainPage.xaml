@@ -19,8 +19,8 @@
         <HyperlinkButton Content="Registráte" Height="23" HorizontalAlignment="Left" Margin="839,132,0,0" Name="HyperlinkButton1" VerticalAlignment="Top" Width="100" Foreground="Black" FontSize="13" />
         <HyperlinkButton Content="Login" FontSize="13" Foreground="Black" Height="23" HorizontalAlignment="Left" Margin="959,132,0,0" Name="HyperlinkButton2" VerticalAlignment="Top" Width="100" />
         <HyperlinkButton Content="Registrar Cupón" FontSize="13" Foreground="Black" Height="23" HorizontalAlignment="Left" Margin="25,132,0,0" Name="HyperlinkButton3" VerticalAlignment="Top" Width="135" />
-        <sdk:DataGrid AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="3" Height="313" HorizontalAlignment="Left" Margin="47,11,0,0" Name="DGOfertas" VerticalAlignment="Top" Width="1012" FontSize="15" />
-        <sdk:Label Content="Registro de Ofertas" FontWeight="Bold" Foreground="Blue" Height="28" Margin="48,178,896,95" Name="Label6" Grid.RowSpan="2" FontSize="16" />
+        <sdk:DataGrid AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="3" Height="313" HorizontalAlignment="Left" Margin="11,11,0,0" Name="DGOfertas" VerticalAlignment="Top" Width="1129" FontSize="15" />
+        <sdk:Label Content="Registro de Ofertas" FontWeight="Bold" Foreground="Blue" Height="28" Margin="12,178,932,95" Name="Label6" Grid.RowSpan="2" FontSize="16" />
         <sdk:Label Height="28" HorizontalAlignment="Left" Margin="511,129,0,0" Name="lblUsuario" VerticalAlignment="Top" Width="247" FontSize="12" FontWeight="ExtraBold" Content=" " />
     </Grid>
 </UserControl>
