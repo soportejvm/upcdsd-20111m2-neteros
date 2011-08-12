@@ -3,8 +3,10 @@
     Private pcDescripcion As String
     Private nCosto As Double
     Private nDias As Integer
+
     Private nDesc As Integer
     Private oFoto As Byte()
+    Private pcRestricciones As String
 
     Public Property Titulo As String
         Get
@@ -42,6 +44,7 @@
         End Set
     End Property
 
+
     Public Property Descuento As Double
         Get
             Return nDesc
@@ -59,4 +62,14 @@
             oFoto = value
         End Set
     End Property
+
+    Public Property Restricciones As String
+        Get
+            Return pcRestricciones
+        End Get
+        Set(ByVal value As String)
+            pcRestricciones = value
+        End Set
+    End Property
+
 End Class
