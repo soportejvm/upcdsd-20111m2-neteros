@@ -6,6 +6,7 @@
     Private nDias As Integer
     Private nDesc As Integer
     Private oFoto As Byte()
+    Private pcRestricciones As String
 
     Public Property Codigo As Integer
         Get
@@ -68,6 +69,15 @@
         End Get
         Set(ByVal value As Byte())
             oFoto = value
+        End Set
+    End Property
+
+    Public Property Restricciones As String
+        Get
+            Return pcRestricciones
+        End Get
+        Set(ByVal value As String)
+            pcRestricciones = value
         End Set
     End Property
 
