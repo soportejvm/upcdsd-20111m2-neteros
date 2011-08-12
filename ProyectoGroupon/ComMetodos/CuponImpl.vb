@@ -1,6 +1,5 @@
-﻿Imports System.Data
-Imports System.Data.SqlClient
-
+﻿Imports System.Data.SqlClient
+Imports System.Data
 Public Class CuponImpl
 
     Public Sub RegistrarCupon(ByVal oCupon As ComIdentidades.Cupon, ByVal oFoto() As Byte)
@@ -17,6 +16,7 @@ Public Class CuponImpl
         oComm.Parameters.Add("@nDias", SqlDbType.Int).Value = oCupon.Dias
         oComm.Parameters.Add("@nDesc", SqlDbType.Money).Value = oCupon.Descuento
         oComm.Parameters.Add("@oFotoOferta", SqlDbType.Image).Value = IIf(oFoto Is Nothing, DBNull.Value, oFoto)
+        oComm.Parameters.Add("@cRestricciones", SqlDbType.VarChar, 250).Value = oCupon.Restricciones
 
         oComm.ExecuteNonQuery()
 
@@ -27,13 +27,11 @@ Public Class CuponImpl
 
     Public Function DevuelveOfertas() As ComTipos.clsDataSet
 
-        Dim D As ComTipos.clsDataset
+        Dim D As ComTipos.clsDataSet
         D = New ComTipos.clsDataSet
         D.CargaTabla(, , "DevueleOfertas ")
         DevuelveOfertas = D
         D = Nothing
     End Function
 
-
-    
 End Class
