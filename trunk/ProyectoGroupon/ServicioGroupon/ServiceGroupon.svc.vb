@@ -67,7 +67,7 @@ Public Class ServiceGroupon
         C = New ComControladora.Cupon
 
         Dim Cupones = From element In DevuelveXDocument(oCupon).Descendants("DATA") Select pcTitulo = element.Descendants("pcTitulo").Value, pcDescripcion = element.Descendants("pcDescripcion").Value, _
-        nCosto = element.Descendants("nCosto").Value, nDias = element.Descendants("nDias").Value, nDesc = element.Descendants("nDesc").Value
+        nCosto = element.Descendants("nCosto").Value, nDias = element.Descendants("nDias").Value, nDesc = element.Descendants("nDesc").Value, cRestricciones = element.Descendants("cRestricciones").Value
 
 
         For Each item In Cupones
@@ -77,6 +77,7 @@ Public Class ServiceGroupon
             objCupon.Dias = item.nDias
             objCupon.Costo = item.nCosto
             objCupon.Descuento = item.nDesc
+            objCupon.Restricciones = item.cRestricciones
         Next
 
 
