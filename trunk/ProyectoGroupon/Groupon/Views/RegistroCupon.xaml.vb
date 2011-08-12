@@ -13,9 +13,41 @@ Partial Public Class RegistroCupon
 
     Private Sub OKButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs) Handles OKButton.Click
         Dim sCadenaCupones As String = ""
+
+        If txtTitulo.Text = "" Then
+            MessageBox.Show("Ingrese Titulo del Cupón", "Mensaje", MessageBoxButton.OK)
+            Exit Sub
+        End If
+
+        If txtDescripcion.Text = "" Then
+            MessageBox.Show("Ingrese Descripcion del Cupón", "Mensaje", MessageBoxButton.OK)
+            Exit Sub
+        End If
+
+        If txtDias.Text = 0 Then
+            MessageBox.Show("Ingrese Dias de Duracion del Cupon", "Mensaje", MessageBoxButton.OK)
+            Exit Sub
+        End If
+
+        If txtPrecio.Text = 0 Then
+            MessageBox.Show("Ingrese Precio del Cupón", "Mensaje", MessageBoxButton.OK)
+            Exit Sub
+        End If
+
+        If txtDscto.Text = 0 Then
+            MessageBox.Show("Ingrese Descuento del Cupón", "Mensaje", MessageBoxButton.OK)
+            Exit Sub
+        End If
+
+        If txtRestricciones.Text = "" Then
+            MessageBox.Show("Ingrese Restricciones del Cupón", "Mensaje", MessageBoxButton.OK)
+            Exit Sub
+        End If
+
         If ValidaLongitudFotos() = False Then Exit Sub
 
         Call LlenaDatosCupon()
+
 
         For Each item In oCupon
             sCadenaCupones = sCadenaCupones + item.DevuelveXMLCupon
@@ -46,6 +78,7 @@ Partial Public Class RegistroCupon
             .Costo = CDbl(Me.txtPrecio.Text)
             .Descuento = CDbl(Me.txtDscto.Text)
             .Dias = CInt(Me.txtDias.Text)
+            .Restricciones = Trim(Me.txtRestricciones.Text)
         End With
 
         oCupon.Add(objCupon)

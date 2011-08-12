@@ -10,8 +10,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Button x:Name="CancelButton" Content="Cancelar" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
-        <Button x:Name="OKButton" Content="Aceptar" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,12,79,0" Grid.Row="1" />
+        <Button x:Name="CancelButton" Content="Cancelar" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,0,0,12" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="Aceptar" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,0,79,12" Grid.Row="1" />
         <sdk:Label Content="Titulo de la Oferta :" Height="28" HorizontalAlignment="Right" Margin="0,10,586,0" Name="Label1" VerticalAlignment="Top" Width="120" />
         <sdk:Label Content="Descripcion :" Height="28" HorizontalAlignment="Right" Margin="0,38,586,0" Name="Label2" VerticalAlignment="Top" Width="120" />
         <sdk:Label Content="Precio :" Height="28" HorizontalAlignment="Right" Margin="0,112,445,0" Name="Label3" VerticalAlignment="Top" Width="50" />
@@ -20,13 +20,15 @@
         <TextBox Height="23" HorizontalAlignment="Right" Margin="0,108,360,0" Name="txtPrecio" VerticalAlignment="Top" Width="79" Text="0.00" TextAlignment="Right" />
         <sdk:Label Content="Descuento :" Height="28" HorizontalAlignment="Right" Margin="0,112,279,0" Name="Label4" VerticalAlignment="Top" Width="75" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="444,108,0,0" Name="txtDscto" VerticalAlignment="Top" Width="79" Text="0.00" TextAlignment="Right" />
-        <Image Margin="12,158,12,31" Name="imgOferta" Stretch="Fill" />
-        <Button Content="..." Height="24" Margin="0,527,12,0" Name="cmdCargaD" Width="32" HorizontalAlignment="Right" />
-        <sdk:Label Background="White" BorderBrush="Black" BorderThickness="1" Content="." FontSize="9" Height="24" Margin="60,527,50,0" Name="txtRutaD" />
-        <sdk:Label Content="Ruta :" Height="28" Margin="19,525,0,33" Name="Label5" HorizontalAlignment="Left" Width="35" Grid.RowSpan="2" />
-        <sdk:Label Content="Imagen de la Oferta" FontWeight="Bold" Height="28" Margin="12,134,231,389" Name="Label6" Foreground="Blue" />
+        <Image Margin="12,258,12,57" Name="imgOferta" Stretch="Fill" />
+        <Button Content="..." Height="24" Margin="0,515,12,12" Name="cmdCargaD" Width="32" HorizontalAlignment="Right" />
+        <sdk:Label Background="White" BorderBrush="Black" BorderThickness="1" Content="." FontSize="9" Height="24" Margin="60,515,50,12" Name="txtRutaD" />
+        <sdk:Label Content="Ruta :" Height="28" Margin="19,513,0,10" Name="Label5" HorizontalAlignment="Left" Width="35" />
+        <sdk:Label Content="Imagen de la Oferta" FontWeight="Bold" Height="28" Margin="12,234,231,289" Name="Label6" Foreground="Blue" />
         <sdk:Label Content="%" Height="28" HorizontalAlignment="Right" Margin="0,112,177,0" Name="txtDesc" VerticalAlignment="Top" Width="31" />
         <sdk:Label Content="Dias" Height="28" HorizontalAlignment="Right" Margin="0,112,586,0" Name="Label7" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Right" Margin="0,108,501,0" Name="txtDias" VerticalAlignment="Top" Width="79" Text="0" TextAlignment="Right" />
+        <sdk:Label Content="Restricciones :" Height="28" HorizontalAlignment="Right" Margin="0,146,587,0" Name="Label8" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="90" HorizontalAlignment="Right" Margin="0,142,13,0" Name="txtRestricciones" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" />
     </Grid>
 </controls:ChildWindow>
